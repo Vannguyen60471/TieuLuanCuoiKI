@@ -44,12 +44,10 @@ public class DanhSachQuanLiHangHoa {
     }
     //CHỨC NĂNG THÊM HÀNG HÓA BẰNG DỮ LIỆU NHẬP TỪ BÀN PHÍM
     public void themHangHoa() throws ParseException {
-        System.out.println("=============MENU=============");
-        System.out.println("| 1.Hang thuc pham           |");
-        System.out.println("| 2.Hang sanh su             |");
-        System.out.println("| 3.Hang dien may            |");
-		System.out.println("| 0.Quay lai                 |");
-        System.out.println("=============MENU=============");
+        System.out.println(" 1.Hang thuc pham           ");
+        System.out.println(" 2.Hang sanh su             ");
+        System.out.println(" 3.Hang dien may            ");
+		System.out.println(" 0.Quay lai                 ");
         System.out.print("Nhap lua chon loai hang hoa : ");
     	int luaChon = input.nextInt();
         HangHoa x;
@@ -736,7 +734,7 @@ public class DanhSachQuanLiHangHoa {
         System.out.println("=========================");
 		System.out.println("| 1. Hang thuc pham     |");
 		System.out.println("| 2. Hang sanh su       |");
-		System.out.println("| 3. Hang đien may      |");
+		System.out.println("| 3. Hang dien may      |");
 		System.out.println("=========================");
 		System.out.print("Nhap lua chon cua ban : ");
 		luaChon = input.nextInt();
