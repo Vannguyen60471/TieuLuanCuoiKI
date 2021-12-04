@@ -1,5 +1,5 @@
 /*
-* ngày tạo: Dec 03, 2021
+* ngày tạo: Dec 04, 2021
 * tên tác giả: Nguyễn Hoàng Trọng văn
 */
 package com.vannht2008110055.TieuLuanCuoiKy;
@@ -8,7 +8,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public abstract class HangHoa {
+public class HangHoa {
     private String maHang ;
     private String tenHangHoa;
     private long giaNhap;
@@ -80,7 +80,4 @@ public abstract class HangHoa {
 		s+=String.format("|%-8s|%-25s|%-25s|%-23s|%-20s|", getMaHang(),getTenHangHoa(),getSoLuongTonKho(), ft.format(getGiaNhap()),chuyenNgaySangChuoi(getNgayNhapKho()));
 		return s;
 	}
-    
-   
-    
 }

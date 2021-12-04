@@ -1,5 +1,5 @@
 /*
-* ngày tạo: Dec 03, 2021
+* ngày tạo: Dec 04, 2021
 * tên tác giả: Nguyễn Hoàng Trọng văn
 */
 package com.vannht2008110055.TieuLuanCuoiKy;
@@ -11,6 +11,7 @@ public class HangDienMay extends HangHoa {
     public HangDienMay(String maHang,String tenHangHoa, long giaNhap, int soLuongTonKho, String ngayNhapKho , int congSuat) throws ParseException {
         super("HDM-" + maHang,tenHangHoa, giaNhap, soLuongTonKho, ngayNhapKho);
         this.congSuat = congSuat;
+        //TODO Auto-generated constructor stub
     }
     public void setCongSuat(int congSuat) {
         this.congSuat = congSuat;
@@ -26,8 +27,5 @@ public class HangDienMay extends HangHoa {
         s = super.toString() + String.format("%-20s|%-20s|", ft.format(getCongSuat()),ft1.format(tinhTien()));
         return s ;
     }
-    
-    
-   
     
 }
