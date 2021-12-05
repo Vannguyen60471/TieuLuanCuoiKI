@@ -26,7 +26,6 @@ public class DanhSachQuanLiHangHoa {
     public void setList(ArrayList<HangHoa> list) {
         this.list = list;
     }
-    //CHỨC NĂNG THÊM HÀNG HÓA TRỰC TIẾP
     public void themHangHoaTrucTiep(HangHoa x) throws ParseException{
         int count = 0 ;
         for(int i = 0 ; i < list.size() ; i++){
@@ -42,7 +41,6 @@ public class DanhSachQuanLiHangHoa {
             list.add(x);
         }
     }
-    //CHỨC NĂNG THÊM HÀNG HÓA BẰNG DỮ LIỆU NHẬP TỪ BÀN PHÍM
     public void themHangHoa() throws ParseException {
         System.out.println(" 1.Hang thuc pham           ");
         System.out.println(" 2.Hang sanh su             ");
@@ -53,7 +51,6 @@ public class DanhSachQuanLiHangHoa {
         HangHoa x;
         switch(luaChon){
             case 1 : {
-				//HÀNG THỰC PHẨM
 				System.out.println("\n\n\tNHAP THONG TIN HANG THUC PHAM NHAP KHO");
                 System.out.print("Nhap ma hang hoa : ");
 				input.nextLine();
@@ -74,7 +71,6 @@ public class DanhSachQuanLiHangHoa {
                 break;
             }
 			case 2 : {
-				//HÀNG SÀNH SỨ
 				System.out.println("\n\n\tNHAP THONG TIN HANG SANH SU NHAP KHO"); 
                 System.out.print("Nhap ma hang hoa : ");
 				input.nextLine();
@@ -95,7 +91,6 @@ public class DanhSachQuanLiHangHoa {
                 break;
 			}
 			case 3 : {
-				//HÀNG ĐIỆN TỬ
 				System.out.println("\n\n\tNHAP THONG TIN HANG DIEN TU NHAP KHO");
                 System.out.print("Nhap ma hang hoa : ");
 				input.nextLine();
@@ -118,7 +113,6 @@ public class DanhSachQuanLiHangHoa {
 			default : break;
         } 
 	}
-    //CHỨC NĂNG SỬA HÀNG HÓA THÔNG QUA MÃ HÀ HÓA 
     public void suaHangHoa() throws ParseException{
         System.out.print("Nhap ma hang hoa cua hang can sua (Ma Hang Hoa : 'LoaiHang-soMaHang' vd HDM-123) : ");
         String maHang = input.nextLine();
@@ -185,7 +179,6 @@ public class DanhSachQuanLiHangHoa {
 
 
     }
-    //CHỨC NĂNG XÓA HÀNG HÓA THEO MÃ HÀNG
     public void xoaHangHoa(){
         System.out.print("Nhap ma hang hoa can xoa : ");
 		String maHH = input.nextLine();
@@ -196,7 +189,6 @@ public class DanhSachQuanLiHangHoa {
             }
         }
     }
-    //CÁC KIỂU XUẤT HÀNG HÓA
     public void xuatHangThucPham(){
         System.out.println("HANG THUC PHAM");
 		for (int i =0; i< 149; i++) {
@@ -383,7 +375,6 @@ public class DanhSachQuanLiHangHoa {
             }
         }
     }
-    //CÁC CHỨC NĂNG SẮP XẾP TĂNG DẦN GIẢM DẦN
     public void sapXepHangHoaGiamDanTheoGia(){
         Collections.sort(list,new Comparator<HangHoa>(){
             @Override
@@ -728,7 +719,6 @@ public class DanhSachQuanLiHangHoa {
         });
         xuatHangDienMayTheoDanhSach(list3);
     }
-    //CÁC CHỨC NĂNG TÌM KIẾM 
     public void timKiemTheoLoai(){
         int luaChon = 0;
         System.out.println("=========================");
