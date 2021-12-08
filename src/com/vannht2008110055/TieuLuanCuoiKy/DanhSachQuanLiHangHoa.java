@@ -729,22 +729,22 @@ public class DanhSachQuanLiHangHoa {
 		System.out.print("Nhap lua chon cua ban : ");
 		luaChon = input.nextInt();
 		switch(luaChon){
-			case 1 :{System.out.println("CAC LOAI HANG THUC PHAM LA :");
+			case 1 :{System.out.println("CAC LOAI MAT HANG THUC PHAM LA :");
 					 xuatHangThucPham();
 					 break;
 					}
-			case 2 :{System.out.println("CAC LOAI HANG SANH SU LA : ");
+			case 2 :{System.out.println("CAC LOAI MAT HANG SANH SU LA : ");
 					 xuatHangSanhSu();
 					 break;
 					}
-			case 3 :{System.out.println("CAC LOAI HANG ĐIEN MAY LA :");
+			case 3 :{System.out.println("CAC LOAI MAT HANG ĐIEN MAY LA :");
 					 xuatHangDienMay();
 					 break;
 					}
 		}
     }
     public void timKiemTheoNgay() throws ParseException{
-        System.out.println("Nhap khoang thoi gian can tim kiem tu ngay : ");
+        System.out.println("Thoi gian can tim kiem tu ngay : ");
 		String ngayBatDau = input.nextLine();
 		System.out.println(" den ngay :");
 		String ngayKetThuc = input.nextLine();
@@ -765,7 +765,7 @@ public class DanhSachQuanLiHangHoa {
         }
     }
     public void timKiemTheoGia(){
-        System.out.println("Nhap khoang gia can tim kiem tu : ");
+        System.out.println("Gia can tim kiem tu : ");
 		long giaBatDau = input.nextInt();
 		System.out.println(" den : ");
 		long giaKetThuc = input.nextInt();
@@ -805,7 +805,6 @@ public class DanhSachQuanLiHangHoa {
             tongChiPhi += hangHoa.tinhTien();
         }
 		SapXepTangDanTheoLoaiVaTheoGia();
-        System.out.println("\t\t\t\t\t\t\t\tBANG THONG KE");
         for (int i =0; i< 149; i++) {
 			System.out.print("-");
 		}
