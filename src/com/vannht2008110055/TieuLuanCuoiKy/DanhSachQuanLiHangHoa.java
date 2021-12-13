@@ -26,12 +26,12 @@ public class DanhSachQuanLiHangHoa {
     public void setList(ArrayList<HangHoa> list) {
         this.list = list;
     }
-    public void themHangHoaTrucTiep(HangHoa x) throws ParseException{
+    public void themHangHoa(HangHoa x) throws ParseException{
         int count = 0 ;
         for(int i = 0 ; i < list.size() ; i++){
             HangHoa sp = list.get(i);
             if(sp.getMaHang().equalsIgnoreCase(x.getMaHang()) || sp.getMaHang().equalsIgnoreCase("HTP-") ||sp.getMaHang().equalsIgnoreCase("HSS-") || sp.getMaHang().equalsIgnoreCase("HDM-") ){
-                System.out.println("HANG HOA BI TRUNG !!!!  VUI LONG NHAP LAI !!!!");
+                System.out.println("HANG BI TRUNG !  VUI LONG NHAP LAI !");
                 count++ ;
                 themHangHoa();
                 break;
@@ -67,7 +67,7 @@ public class DanhSachQuanLiHangHoa {
                 System.out.print("Nhap ngay het han (dd/mm/yyyy) : ");
 				String ngayHH = input.nextLine();
 				x = new HangThucPham( maHH, tenHH , donGia , soLuongTonKho , ngayNK , ngayHH );
-				themHangHoaTrucTiep(x);
+				themHangHoa(x);
                 break;
             }
 			case 2 : {
@@ -87,7 +87,7 @@ public class DanhSachQuanLiHangHoa {
                 System.out.print("Nhap nha cung cap : ");
                 String nhaCC = input.nextLine();
 				x = new HangSanhSu(maHH, tenHH, donGia , soLuongTonKho , ngayNK , nhaCC);
-                themHangHoaTrucTiep(x);
+                themHangHoa(x);
                 break;
 			}
 			case 3 : {
@@ -107,7 +107,7 @@ public class DanhSachQuanLiHangHoa {
                 System.out.print("Nhap cong suat thiet bi : ");
                 int congSuat =input.nextInt();
 				x = new HangDienMay(maHH, tenHH , donGia , soLuongTonKho,ngayNK, congSuat) ;
-				themHangHoaTrucTiep(x);
+				themHangHoa(x);
                 break;
 			}
 			default : break;
@@ -156,7 +156,6 @@ public class DanhSachQuanLiHangHoa {
                     list.remove(x);
                 }
                 else if(x instanceof HangDienMay){
-                    //HÀNG ĐIỆN TỬ
                     String[] maHH = maHang.split("-",2);
                     System.out.println("\n\n\tNHAP THONG TIN HANG DIEN TU CAN SUA");
                     System.out.print("Nhap ten hang hoa(khong dau) : ");
@@ -253,7 +252,7 @@ public class DanhSachQuanLiHangHoa {
 		}
         System.out.println();
     }
-    public void xuatHangThucPhamTrucTiep(HangHoa x){
+    public void xuatHangThucPham(HangHoa x){
 		for (int i =0; i< 149; i++) {
 			System.out.print("-");
 		}
@@ -365,7 +364,7 @@ public class DanhSachQuanLiHangHoa {
         for(int i = 0 ; i < list.size() ; i++){
            HangHoa x = list.get(i);
             if(x instanceof HangThucPham){
-                xuatHangThucPhamTrucTiep(x);
+                xuatHangThucPham(x);
             }
             else if(x instanceof HangSanhSu){
                 xuatHangSanhSuTrucTiep(x);
@@ -753,7 +752,7 @@ public class DanhSachQuanLiHangHoa {
             HangHoa x = list.get(i);
             if(x.getNgayNhapKho().compareTo(chuyenChuoiSangNgay(ngayBatDau)) >= 0 && x.getNgayNhapKho().compareTo(chuyenChuoiSangNgay(ngayKetThuc))<=0  ){
                 if(x instanceof HangThucPham){
-                    xuatHangThucPhamTrucTiep(x);
+                    xuatHangThucPham(x);
                 }
                 else if(x instanceof HangSanhSu){
                     xuatHangSanhSuTrucTiep(x);
@@ -773,7 +772,7 @@ public class DanhSachQuanLiHangHoa {
             HangHoa x = list.get(i);
             if(x.getGiaNhap() >= giaBatDau && x.getGiaNhap() <= giaKetThuc){
                 if(x instanceof HangThucPham){
-                    xuatHangThucPhamTrucTiep(x);
+                    xuatHangThucPham(x);
                 }
                 else if(x instanceof HangSanhSu){
                     xuatHangSanhSuTrucTiep(x);
@@ -814,6 +813,7 @@ public class DanhSachQuanLiHangHoa {
 		}
         System.out.println("\n       Ki ten                                                                  Ki ten");
 		System.out.println("\n     Nguoi nhap kho                                                        Nguoi quan kho");
+        System.out.println("\n          Van                                                                     Veen");
         
     }
 }
