@@ -785,13 +785,7 @@ public class DanhSachQuanLiHangHoa {
         }
     }
     public static Date chuyenChuoiSangNgay(String chuoiNgay) throws ParseException{
-        //ngày việt nam
         Date date;
-        /**
-         * dd: ngày
-         * mm: tháng
-         * yyyy: năm
-         */
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/mm/yyyy");
         date = simpleDateFormat.parse(chuoiNgay);
         return date;
@@ -809,17 +803,18 @@ public class DanhSachQuanLiHangHoa {
 			System.out.print("-");
 		}
 		System.out.println();
-        System.out.printf("|%-34s|%-112d|\n","Tong so luong",tongSoLuong);
+        System.out.printf("|%-34s|%-112d|\n","Tong so luong hang trong kho",tongSoLuong);
         for (int i =0; i< 149; i++) {
 			System.out.print("-");
 		}
 		System.out.println();
-        System.out.printf("|%-34s|%-25s%-67s%-20s|\n","Tong chi phi"," "," ",ft.format(tongChiPhi));
+        System.out.printf("|%-34s|%-25s%-67s%-20s|\n","Tong chi phi hang trong kho"," "," ",ft.format(tongChiPhi));
         for (int i =0; i< 149; i++) {
 			System.out.print("-");
 		}
-		System.out.println();
-
+        System.out.println("\n       Ki ten                                                                  Ki ten");
+		System.out.println("\n     Nguoi nhap kho                                                        Nguoi quan kho");
+        
     }
 }
     

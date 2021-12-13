@@ -104,7 +104,7 @@ public class testDrive {
                     break;
                 }
                 case 2 : {
-                    System.out.println(" 2.1 Tim kiem theo loai      ");
+                    System.out.println(" 2.1 Tim kiem theo loai");
                     System.out.println(" 2.2 Tim kiem theo ngay nhap ");
                     System.out.println(" 2.3 Tim kiem theo gia       ");
                     System.out.println(" 0.  Thoat                   ");
@@ -119,7 +119,6 @@ public class testDrive {
                     break;
                 }
                 case 3 : {
-                    System.out.println(" 3.Sap xep tang dan theo :                  ");
                     System.out.println("    3.1 Gia nhap                            ");
                     System.out.println("    3.2 Ngay nhap                           ");
                     System.out.println("    3.3 Loai va ngay nhap                   ");
@@ -137,7 +136,6 @@ public class testDrive {
                     break;
                 }
                 case 4 : {
-                    System.out.println(" 3.Sap xep giam dan theo :                  ");
                     System.out.println("    3.1 Gia nhap                            ");
                     System.out.println("    3.2 Ngay nhap                           ");
                     System.out.println("    3.3 Loai va ngay nhap                   ");
