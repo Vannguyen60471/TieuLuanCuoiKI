@@ -114,7 +114,7 @@ public class DanhSachQuanLiHangHoa {
         } 
 	}
     public void suaHangHoa() throws ParseException{
-        System.out.print("Nhap ma hang hoa cua hang can sua (Ma Hang Hoa : 'LoaiHang-soMaHang' vd HDM-123) : ");
+        System.out.print("Nhap ma hang hoa cua hang can sua : ");
         String maHang = input.nextLine();
         for(int i = 0 ; i< list.size();i++){
             HangHoa x = list.get(i);
@@ -720,12 +720,10 @@ public class DanhSachQuanLiHangHoa {
     }
     public void timKiemTheoLoai(){
         int luaChon = 0;
-        System.out.println("=========================");
-		System.out.println("| 1. Hang thuc pham     |");
-		System.out.println("| 2. Hang sanh su       |");
-		System.out.println("| 3. Hang dien may      |");
-		System.out.println("=========================");
-		System.out.print("Nhap lua chon cua ban : ");
+		System.out.println(" 1. Hang thuc pham     ");
+		System.out.println(" 2. Hang sanh su       ");
+		System.out.println(" 3. Hang dien may      ");
+        System.out.print("Nhap lua chon cua ban :  ");
 		luaChon = input.nextInt();
 		switch(luaChon){
 			case 1 :{System.out.println("CAC LOAI MAT HANG THUC PHAM LA :");
