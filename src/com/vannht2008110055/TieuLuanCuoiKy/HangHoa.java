@@ -53,7 +53,7 @@ public class HangHoa {
         return ngayNhapKho;
     }
     public static Date chuyenChuoiSangNgay(String chuoiNgay) throws ParseException{
-        Date date;
+        Date date;  
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/mm/yyyy");
         date = simpleDateFormat.parse(chuoiNgay);
         return date;
